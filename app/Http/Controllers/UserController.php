@@ -10,12 +10,12 @@ use App\User;
 class UserController extends Controller
 {
     #metodo para registrar
-    public function register(){
+    public function register(Request $request){
     	#validación
         $this->validate($request, [
             'name' => 'required|min: 4',
             'username' => 'required',
-            'email' => 'required|unique',
+            'email' => 'required',
             'password' => 'required|min:6'
         ]);
         #creamos 1 nuevo usuario
