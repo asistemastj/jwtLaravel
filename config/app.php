@@ -176,6 +176,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        #provider que necesitara jwt
+        'Tymon\JWTAuth\Providers\JWTAuthServiceProvider'
 
     ],
 
@@ -225,6 +227,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        #alias JWT
+        'JWTAuth' => 'Tymon\JWTAuth\Facades\JWTAuth',
 
     ],
 
